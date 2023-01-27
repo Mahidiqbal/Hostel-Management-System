@@ -1,0 +1,87 @@
+﻿@model Hostel_Management_System.Models.User
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create User</h1>
+
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mb-3">
+                        <ejs-textbox id="UserName" placeholder="User Name" ejs-for="UserName" floatLabelType="Auto"></ejs-textbox>
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-3">
+                        <ejs-textbox id="UserCNIC" placeholder="User CNIC" ejs-for="UserCNIC" floatLabelType="Auto"></ejs-textbox>
+                        <span asp-validation-for="UserCNIC" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-3">
+                        <ejs-textbox id="UserPhone" placeholder="User Phone" ejs-for="UserPhone" floatLabelType="Auto"></ejs-textbox>
+                        <span asp-validation-for="UserPhone" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mb-3">
+                        <ejs-textbox id="UserEmail" placeholder="User Email" ejs-for="UserEmail" floatLabelType="Auto"></ejs-textbox>
+                        <span asp-validation-for="UserEmail" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-3">
+                        <ejs-textbox id="UserBD" placeholder="BirthDate" ejs-for="UserBD" floatLabelType="Auto"></ejs-textbox>
+                        <span asp-validation-for="UserBD" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-3">
+                        <ejs-textbox id="UserAddress" placeholder="User Address" ejs-for="UserAddress" floatLabelType="Auto"></ejs-textbox>
+                        <span asp-validation-for="UserAddress" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mb-3">
+                        <ejs-textbox id="UserRole" placeholder="Role" ejs-for="UserRole" floatLabelType="Auto"></ejs-textbox>
+                        <span asp-validation-for="UserRole" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-3">
+                        <ejs-textbox id="Password" placeholder="Password" ejs-for="Password" floatLabelType="Auto"></ejs-textbox>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <input type="submit" value="Create" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
